@@ -4,14 +4,23 @@ const mongoose = require('mongoose');
 const Blog = require('./models/blog');
 const blogRoutes = require('./routes/blogRoutes');
 
-
 const app = express();
 
 require('dotenv').config();
 
+const PORT = process.env.PORT ?? 3333;
+const HOST = '0.0.0.0';
+
 mongoose.connect(process.env.CONNECTIONSTRING)
-.then((result) => app.listen(3000))
-.catch((err) => console.log(err));
+  .then((result) => {
+    app.listen({
+      host: HOST,
+      port: PORT
+    }, () => {
+      console.log(`Server is running on http://${HOST}:${PORT}`);
+    });
+  })
+  .catch((err) => console.log(err));
 
 app.set('view engine', 'ejs');
 
