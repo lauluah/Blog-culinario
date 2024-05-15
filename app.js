@@ -8,16 +8,13 @@ const app = express();
 
 require('dotenv').config();
 
-const PORT = process.env.PORT ?? 3333;
-const HOST = '0.0.0.0';
-
 mongoose.connect(process.env.CONNECTIONSTRING)
-  .then((result) => {
+  .then(() => {
     app.listen({
-      host: HOST,
-      port: PORT
+      host: '0.0.0.0',
+      port: process.env.PORT ?? 3333,
     }, () => {
-      console.log(`Server is running on http://${HOST}:${PORT}`);
+      console.log(`Server is running`);
     });
   })
   .catch((err) => console.log(err));
