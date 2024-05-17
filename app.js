@@ -33,8 +33,8 @@ app.get('/', (req, res) => {
   res.redirect('/blogs');
 });
 
-app.get('/about', (req, res) => {
-  res.render('about', { title: 'About' });
+app.get('/SobreNos', (req, res) => {
+  res.render('SobreNos', { title: 'SobreNos' });
 });
 
 app.use('/blogs', blogRoutes);
