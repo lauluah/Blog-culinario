@@ -5,7 +5,7 @@ Este projeto é um site culinário onde é possível explorar e adicionar receit
 
 Nova Receita : Os usuários podem inserir os detalhes de uma nova receita que desejam compartilhar. Após preencherem o formulário e enviarem as informações, o site processa esses dados e adiciona ao banco de dados. <br><br>
 <img src="add-site.png" alt="Minha Imagem" width="700"><br><br>
-- [Link de acesso](https://site-culinario.onrender.com/blogs) ✨
+- [Link de acesso](https://compartilhandosabores.onrender.com/blogs) ✨
 
 ## Tecnologias Utilizadas :
 - Node.js
